@@ -10,7 +10,7 @@ test('expects only empty(null) reposistories to show no valid languages', () =>{
 })
 
 test('Assumes that the users favorite language is the one they hsve used the most', () => {
-    expect(lc.findFavorite(['Java', 'Rust', 'Rust', 'Rust', 'Rust', 'Javascript', 'Javascript', 'Javascript', ]))
+    expect(lc.findFavorite(['Java', 'Rust', 'Rust', 'Rust', 'Rust', 'Javascript', 'Javascript', 'Javascript'])).toBe("'s favorite language is: Rust")
 })
 
 test('will ignore the C language if another is available because no one really likes coding in C', () =>{

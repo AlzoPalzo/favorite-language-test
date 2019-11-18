@@ -1,5 +1,5 @@
 
-removeNull = (languages) => {
+removeNull = (languages) => { //remove empty repositories
     return languages.filter(language => language != null)
 }
 

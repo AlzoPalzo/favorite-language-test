@@ -4,10 +4,10 @@ const fetch = require('node-fetch')
 const languagesChecker = require('./languagesChecker')
 
 const URL  = "https://api.github.com/users/"
-const params = "?per_page=50&sort=created"
+const params = "?per_page=50&sort=created" // check up to the 50 most recently created repositories by the user
 
 
-prompt = () =>
+prompt = () =>   // request github username
 {
     const rl = readline.createInterface({
         input: process.stdin,
@@ -21,7 +21,7 @@ prompt = () =>
     })
 }
 
-getRepos = (userName) =>{
+getRepos = (userName) =>{ // check if username is valid and then get the reopsitory information
     try {
         const options = {
             headers: {
