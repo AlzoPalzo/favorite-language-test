@@ -3,7 +3,7 @@ removeNull = (languages) => {
     return languages.filter(language => language != null)
 }
 
-countedLanguages = (languages) => {
+countLanguages = (languages) => {
     countedLanguages  = {}
     for (let i = 0; i < languages.length; i++) {
         let language = languages[i]
@@ -18,8 +18,9 @@ countedLanguages = (languages) => {
 }
 
 extractFavorite = (countedLanguages) => {
-    if(countedLanguages['C'] && Object.keys(countedLanguages) > 1) {
-        delete countedLanguages[C]
+    if(countedLanguages['C'] && Object.keys(countedLanguages).length > 1) {
+        console.log("here")
+        delete countedLanguages['C']
     }
     if(countedLanguages["Python"]){
         return "Python"
@@ -32,7 +33,7 @@ exports.findFavorite = (languages) => {
     if (languages.length < 1){
         return " has no recent repositories with a valid language"
     }
-    countedLanguages = countedLanguages(languages)
+    countedLanguages = countLanguages(languages);
     let favorite = extractFavorite(countedLanguages)
     return `'s favorite language is: ${favorite}`
 }
