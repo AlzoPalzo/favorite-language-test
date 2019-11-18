@@ -1,7 +1,5 @@
 const readline = require ('readline')
 
-let username = ""
-
 prompt = () =>
 {
     const rl = readline.createInterface({
