@@ -4,7 +4,7 @@
 This NodeJs program takes a Github username and attempts to tell you what that users favorite programming language is.
 
 ## How does it work?
-The program looks at up to 50 of the most recently created public repositories by a user via the Github API. It will then count up the most
+The program looks at up to 50 of the most recently created public repositories by a user via the Github API. It will then add up the most
 commonly used language for each repository and find the most used language and declare that as the favorite in most cases. The program makes
 the assumption that nobody likes programming in C and so will pick a different language if another is available. The program also 
 assumes that Python is the best language because... it is, so any user that has a Python heavy repository will be assumed to have Python as
