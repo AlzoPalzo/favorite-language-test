@@ -1,4 +1,8 @@
 const readline = require ('readline')
+const fetch = require('node-fetch')
+
+const URL  = "api.github.com"
+
 
 prompt = () =>
 {
@@ -9,10 +13,24 @@ prompt = () =>
     rl.setPrompt("Enter a Github username: \n")
     rl.prompt()
     rl.on('line', name =>{
-        username = name
+        getRepos(name)
         rl.close()
-    }).on('close', () =>{
-        process.exit(0)
     })
+}
+
+getRepos = (userName) =>{
+    try {
+        const options = {headers: {'user-agent': 'node.js'}}
+        fetch ("https://api.github.com" + "/users/" + userName + "/repos", options)
+        .then(resp => resp.json())
+        .then(repos => {
+            if (repos.message && repos.message === "Not Found") {
+                console.log("User not found")
+                prompt()
+            }
+        })
+    } catch (error) {
+        console.log(error)
+    }
 }
 prompt()

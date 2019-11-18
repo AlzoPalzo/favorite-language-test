@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AlzoPalzo/favorite-language-test/issues"
   },
-  "homepage": "https://github.com/AlzoPalzo/favorite-language-test#readme"
+  "homepage": "https://github.com/AlzoPalzo/favorite-language-test#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }
