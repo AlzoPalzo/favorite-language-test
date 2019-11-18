@@ -37,7 +37,8 @@ getRepos = (userName) =>{
             }
             else{
                 const languages = repos.map(repo => repo.language)
-                const result = languagesChecker(languages)
+                const result = languagesChecker.findFavorite(languages)
+                console.log(userName + result)
             }
         })
     } catch (error) {
