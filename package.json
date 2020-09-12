@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/AlzoPalzo/favorite-language-test#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "jest": "^24.9.0"
